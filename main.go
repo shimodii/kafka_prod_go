@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	x := 20
+	x := 2
 
 	writer := kafka.Writer{
 		Addr:  kafka.TCP("localhost:9092"),
@@ -31,6 +31,7 @@ func main() {
 		if err != nil {
 			fmt.Println("Error: ", err)
 		}
+		fmt.Println(msg.Value)
 
 		time.Sleep(interval)
 	}
