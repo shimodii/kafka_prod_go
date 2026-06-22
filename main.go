@@ -22,7 +22,7 @@ func main() {
 	for {
 		var wg sync.WaitGroup
 
-		for j := 0; j < 100; j++ {
+		for j := 0; j < 1000; j++ {
 			wg.Add(1)
 			i++
 			go func(seq int) {
@@ -37,7 +37,7 @@ func main() {
 		}
 
 		wg.Wait()
-		fmt.Printf("sent 100 messages, sleeping %d seconds...\n", sleepSeconds)
+		fmt.Printf("sent 1000 messages, sleeping %d seconds...\n", sleepSeconds)
 		time.Sleep(time.Duration(sleepSeconds) * time.Second)
 	}
 }

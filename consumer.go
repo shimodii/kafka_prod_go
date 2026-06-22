@@ -23,6 +23,6 @@ func main() {
 			continue
 		}
 		fmt.Printf("offset=%d value=%s\n", msg.Offset, string(msg.Value))
-		time.Sleep(time.Second * 5)
+		time.Sleep(time.Second * 1)
 	}
 }
