@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	x := 10
+	x := 20
 
 	writer := kafka.Writer{
 		Addr:  kafka.TCP("localhost:9092"),
